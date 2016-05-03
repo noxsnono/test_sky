@@ -1,0 +1,40 @@
+<div class="container text-center">
+	<h2>Customer Bill</h2>
+
+	<div class="row-fluid">
+		<div class="container text-left">
+
+			<table class="table">
+				<tr>
+					<td><b>Generated on</b> {{statement.generated}}</td>
+					<td><b>From</b> {{statement.period.from}}</td>
+				</tr>
+				<tr>
+					<td><b>Due</b> {{statement.due}}</td>
+					<td> <b>to</b> {{statement.period.to}}</td>
+				</tr>
+				<tr>
+					<td><b>Total</b> {{total}} &pound;</td>
+				</tr>
+			</table>
+
+
+
+
+		</div>
+
+		<div class="container">
+			<div class="container" style="display: inline-block">
+				{{file.cursus[0].grade}}
+			</div>
+			<div class="container progress" style="display: inline-block">
+				<div class="progress-bar" role="progressbar"
+						aria-valuenow="{{file.cursus[0]['42'].level}}" aria-valuemin="0"
+						aria-valuemax="100" style="width: {{file.cursus[0].level * 4}}%;">
+					{{file.cursus[0].level}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
