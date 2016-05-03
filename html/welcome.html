@@ -1,6 +1,9 @@
 <div class="container text-center">
 	<h2>Customer Bill</h2>
-	<div class="row-fluid">
+	<br>
+	<a href="" data-ng-click="printIt()">Print</a>
+	<br><br>
+	<div class="row-fluid" id="printArea">
 		<div class="container text-left">
 			<div ng-include src="'html/welcome/table_statement.html'"></div>
 			<div ng-include src="'html/welcome/table_packages.html'"></div>

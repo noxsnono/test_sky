@@ -1,4 +1,4 @@
-noxsApp.config(['$routeProvider', '$httpProvider',
+SkyTestApp.config(['$routeProvider', '$httpProvider',
 				function ($routeProvider, $httpProvider) {
 	$routeProvider.
 	when('/welcome', {

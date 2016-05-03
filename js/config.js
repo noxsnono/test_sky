@@ -1,16 +1,8 @@
-var	url = 'http://www.noxs.net/42stats',
+var jsonRequestUrl = 'http://safe-plains-5453.herokuapp.com/bill.json',
 
-g_moiroux;
+SkyTestController = angular.module('SkyTestController',[]),
 
-jmoiroux_json = url + '/db/jmoiroux.json',
-
-jsonRequestUrl = 'http://safe-plains-5453.herokuapp.com/bill.json',
-
-noxsController = angular.module('SkyTestController',[]),
-
-noxsApp = angular.module('SkyTestApp', ['ngRoute', 'ngCookies', 'SkyTestController']);
-
-
+SkyTestApp = angular.module('SkyTestApp', ['ngRoute', 'ngCookies', 'SkyTestController']);
 
 //
 //	CHART JS

@@ -2,13 +2,9 @@
   <div class="panel-heading">
     <h3 class="panel-title">
       <a href="" ata-ng-init="buy_rente_show = false" data-ng-click="buy_rente_show = ! buy_rente_show">
-        skyStore
-        <div class="pull-right" data-ng-hide="buy_rente_show">
-          <span class="glyphicon glyphicon-plus"></span>
-        </div>
-        <div class="pull-right" data-ng-show="buy_rente_show">
-          <span class="glyphicon glyphicon glyphicon-minus"></span>
-        </div>
+        SkyStore <b>{{skyStore.rentals.length + skyStore.buyAndKeep.length}}</b> for a total <b>{{skyStore.total}}  &pound;</b>
+        <div class="pull-right" data-ng-hide="buy_rente_show">+</div>
+        <div class="pull-right" data-ng-show="buy_rente_show">-</div>
       </a>
     </h3>
   </div>
@@ -19,17 +15,14 @@
         <th>title</th>
         <th>Cost</th>
       </thead>
-      <tr>
-        <td>Items <b>{{skyStore.rentals.length + skyStore.buyAndKeep.length}}</b> for a total <b>{{skyStore.total}}  &pound;</b></td>
-      </tr>
 
-      <tr><td><h3>rentals</h4></td></tr>
+      <tr><td><h3>Rentals</h4></td></tr>
       <tr data-ng-repeat="rent in skyStore.rentals">
         <td>{{rent.title}}</td>
         <td>{{rent.cost}} &pound;</td>
       </tr>
 
-      <tr><td><h3>buyAndKeep</h4></td></tr>
+      <tr><td><h3>Buy & keep</h4></td></tr>
       <tr data-ng-repeat="keep in skyStore.buyAndKeep">
         <td>{{keep.title}}</td>
         <td>{{keep.cost}} &pound;</td>
