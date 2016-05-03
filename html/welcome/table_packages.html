@@ -1,16 +1,35 @@
-<h3>Packages</h3>
-<table class="table">
-  <thead>
-    <th>Support</th>
-    <th>Name</th>
-    <th>Cost</th>
-  </thead>
-  <tr>
-    <td>Subscribes <b>{{package.subscriptions.length}}</b> option(s) for a total <b>{{package.total}}  &pound;</b></td>
-  </tr>
-  <tr data-ng-repeat="pack in package.subscriptions">
-    <td>{{pack.type}}</td>
-    <td>{{pack.name}}</td>
-    <td>{{pack.cost}}  &pound;</td>
-  </tr>
-</table>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <a href="" data-ng-init="packages_show = false"
+          data-ng-click="packages_show = ! packages_show">
+        Packages
+        <div class="pull-right" data-ng-hide="packages_show">
+          <span class="glyphicon glyphicon-plus"></span>
+        </div>
+        <div class="pull-right" data-ng-show="packages_show">
+          <span class="glyphicon glyphicon glyphicon-minus"></span>
+        </div>
+      </a>
+    </h3>
+  </div>
+
+  <div class="panel-body" data-ng-show="packages_show">
+    <table class="table">
+
+      <thead>
+        <th>Support</th>
+        <th>Name</th>
+        <th>Cost</th>
+      </thead>
+      <tr>
+        <td>Subscribes <b>{{package.subscriptions.length}}</b> option(s) for a total <b>{{package.total}}  &pound;</b></td>
+      </tr>
+      <tr data-ng-repeat="pack in package.subscriptions">
+        <td>{{pack.type}}</td>
+        <td>{{pack.name}}</td>
+        <td>{{pack.cost}}  &pound;</td>
+      </tr>
+    </table>
+  </div>
+</div>

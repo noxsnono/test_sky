@@ -1,16 +1,35 @@
-<h3>Calls</h3>
-<table class="table">
-  <thead>
-    <th>Called</th>
-    <th>Duration</th>
-    <th>Cost</th>
-  </thead>
-  <tr>
-    <td>Calls <b>{{callCharges.calls.length}}</b> for a total <b>{{callCharges.total}}  &pound;</b></td>
-  </tr>
-  <tr data-ng-repeat="entry in callCharges.calls">
-    <td>{{entry.called}}</td>
-    <td>{{entry.duration}}</td>
-    <td>{{entry.cost}} &pound;</td>
-  </tr>
-</table>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <a href="" data-ng-init="call_show = false"
+          data-ng-click="call_show = ! call_show">
+        Calls
+        <div class="pull-right" data-ng-hide="call_show">
+          <span class="glyphicon glyphicon-plus"></span>
+        </div>
+        <div class="pull-right" data-ng-show="call_show">
+          <span class="glyphicon glyphicon glyphicon-minus"></span>
+        </div>
+      </a>
+    </h3>
+  </div>
+
+  <div class="panel-body" data-ng-show="call_show">
+    <table class="table">
+
+      <thead>
+        <th>Called</th>
+        <th>Duration</th>
+        <th>Cost</th>
+      </thead>
+      <tr>
+        <td>Calls <b>{{callCharges.calls.length}}</b> for a total <b>{{callCharges.total}}  &pound;</b></td>
+      </tr>
+      <tr data-ng-repeat="entry in callCharges.calls">
+        <td>{{entry.called}}</td>
+        <td>{{entry.duration}}</td>
+        <td>{{entry.cost}} &pound;</td>
+      </tr>
+    </table>
+  </div>
+</div>

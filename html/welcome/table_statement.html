@@ -1,14 +1,40 @@
-<h3>Headers</h3>
-<table class="table">
-  <tr>
-    <td><b>Generated on</b> {{statement.generated}}</td>
-    <td><b>From</b> {{statement.period.from}}</td>
-  </tr>
-  <tr>
-    <td><b>Due</b> {{statement.due}}</td>
-    <td> <b>to</b> {{statement.period.to}}</td>
-  </tr>
-  <tr>
-    <td><b>Total</b> {{total}} &pound;</td>
-  </tr>
-</table>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      <a href="" data-ng-init="statement_show = true"
+          data-ng-click="statement_show = ! statement_show">
+        Statement
+        <div class="pull-right" data-ng-hide="statement_show">
+          <span class="glyphicon glyphicon-plus"></span>
+        </div>
+        <div class="pull-right" data-ng-show="statement_show">
+          <span class="glyphicon glyphicon glyphicon-minus"></span>
+        </div>
+      </a>
+    </h3>
+  </div>
+
+  <div class="panel-body" data-ng-show="statement_show">
+    <table class="table">
+      <tr>
+        <td>
+          Generated on <b>{{statement.generated}}</b>
+          From <b>{{statement.period.from}}</b>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Due <b>{{statement.due}}</b>
+          to <b>{{statement.period.to}}</b>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Total <b>{{total}} &pound;</b>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
