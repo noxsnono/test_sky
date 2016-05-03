@@ -4,4 +4,4 @@ Jean-Jacques MOIROUX
 ## Run
 
 Go to
-    skytest.noxs.net
+    http://skytest.noxs.net
