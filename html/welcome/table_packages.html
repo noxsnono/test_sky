@@ -1,0 +1,16 @@
+<h3>Packages</h3>
+<table class="table">
+  <thead>
+    <th>Support</th>
+    <th>Name</th>
+    <th>Cost</th>
+  </thead>
+  <tr>
+    <td>Subscribes <b>{{package.subscriptions.length}}</b> option(s) for a total <b>{{package.total}}  &pound;</b></td>
+  </tr>
+  <tr data-ng-repeat="pack in package.subscriptions">
+    <td>{{pack.type}}</td>
+    <td>{{pack.name}}</td>
+    <td>{{pack.cost}}  &pound;</td>
+  </tr>
+</table>

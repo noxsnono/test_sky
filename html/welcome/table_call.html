@@ -1,0 +1,16 @@
+<h3>Calls</h3>
+<table class="table">
+  <thead>
+    <th>Called</th>
+    <th>Duration</th>
+    <th>Cost</th>
+  </thead>
+  <tr>
+    <td>Calls <b>{{callCharges.calls.length}}</b> for a total <b>{{callCharges.total}}  &pound;</b></td>
+  </tr>
+  <tr data-ng-repeat="entry in callCharges.calls">
+    <td>{{entry.called}}</td>
+    <td>{{entry.duration}}</td>
+    <td>{{entry.cost}} &pound;</td>
+  </tr>
+</table>

@@ -1,71 +1,11 @@
 <div class="container text-center">
 	<h2>Customer Bill</h2>
-
 	<div class="row-fluid">
 		<div class="container text-left">
-
-			<table class="table">
-				<tr>
-					<td><b>Generated on</b> {{statement.generated}}</td>
-					<td><b>From</b> {{statement.period.from}}</td>
-				</tr>
-				<tr>
-					<td><b>Due</b> {{statement.due}}</td>
-					<td> <b>to</b> {{statement.period.to}}</td>
-				</tr>
-				<tr>
-					<td><b>Total</b> {{total}} &pound;</td>
-				</tr>
-			</table>
-
-			<table class="table">
-				<thead>
-					<th>Support</th>
-					<th>Name</th>
-					<th>Cost</th>
-				</thead>
-				<tr>
-					<td>Subscribes <b>{{package.subscriptions.length}}</b> option(s) for a total <b>{{package.total}}  &pound;</b></td>
-				</tr>
-				<tr data-ng-repeat="entry in package.subscriptions">
-					<td>{{entry.type}}</td>
-					<td>{{entry.name}}</td>
-					<td>{{entry.cost}}  &pound;</td>
-				</tr>
-			</table>
-
-			<table class="table">
-				<thead>
-					<th>Called</th>
-					<th>Duration</th>
-					<th>Cost</th>
-				</thead>
-				<tr>
-					<td>Calls <b>{{callCharges.calls.length}}</b> for a total <b>{{callCharges.total}}  &pound;</b></td>
-				</tr>
-				<tr data-ng-repeat="entry in callCharges.calls">
-					<td>{{entry.called}}</td>
-					<td>{{entry.duration}}</td>
-					<td>{{entry.cost	}} &pound;</td>
-				</tr>
-			</table>
-
-
-
-		</div>
-
-		<div class="container">
-			<div class="container" style="display: inline-block">
-				{{file.cursus[0].grade}}
-			</div>
-			<div class="container progress" style="display: inline-block">
-				<div class="progress-bar" role="progressbar"
-						aria-valuenow="{{file.cursus[0]['42'].level}}" aria-valuemin="0"
-						aria-valuemax="100" style="width: {{file.cursus[0].level * 4}}%;">
-					{{file.cursus[0].level}}
-				</div>
-			</div>
+			<div ng-include src="'html/welcome/table_statement.html'"></div>
+			<div ng-include src="'html/welcome/table_packages.html'"></div>
+			<div ng-include src="'html/welcome/table_call.html'"></div>
+			<div ng-include src="'html/welcome/table_buy_keep.html'"></div>
 		</div>
 	</div>
-
 </div>
